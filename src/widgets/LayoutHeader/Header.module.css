@@ -1,0 +1,17 @@
+.header {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  background-clip: padding-box;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

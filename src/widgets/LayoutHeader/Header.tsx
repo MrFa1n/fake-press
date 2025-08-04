@@ -1,7 +1,9 @@
+import styles from "./Header.module.css";
+
 export const Header = () => {
   return (
-    <header>
-      <h1>FakePress</h1>
+    <header className={styles.header}>
+      <h1 className={styles.logo}>FakePress</h1>
     </header>
   );
 };

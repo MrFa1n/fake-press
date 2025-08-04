@@ -1,6 +1,7 @@
 import { Header } from "@/widgets/LayoutHeader/Header";
 import { Footer } from "@/widgets/LayoutFooter/Footer";
 import type { ReactNode } from "react";
+import styles from "./MainLayout.module.css";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -8,9 +9,9 @@ interface MainLayoutProps {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="layout">
+    <div className={styles.layout}>
       <Header />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <Footer />
     </div>
   );
