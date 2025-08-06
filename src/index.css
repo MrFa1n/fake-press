@@ -4,5 +4,55 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6;
+}
+
+body[data-theme="light"] {
+  --bg-color: #f9fafb;
+  --text-color: #1f2937d6;
+
+  --card-bg: #fff;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: rgba(0, 0, 0, 0.12);
+
+  --title-color: #333;
+  --body-color: #666;
+
+  --header-bg: #1f2937;
+  --header-text: #ffffff;
+  --header-shadow: rgba(0, 0, 0, 0.4);
+
+  --logo-color: inherit;
+
+  --footer-bg: #f9fafb;
+  --footer-text: #4b5563;
+  --footer-border: rgba(229, 231, 235, 0.1);
+}
+
+body[data-theme="dark"] {
+  --bg-color: #1f2937d6;
+  --text-color: #f9fafb;
+
+  --card-bg: #2c3e50;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.8);
+  --card-shadow-hover: rgba(0, 0, 0, 0.12);
+
+  --title-color: #f9fafb;
+  --body-color: #d1d5db;
+
+  --header-bg: #ffffff;
+  --header-text: #1f2937;
+  --header-shadow: rgba(0, 0, 0, 0.4);
+
+  --logo-color: inherit;
+
+  --footer-bg: #2c3e50;
+  --footer-text: #f9fafb;
+  --footer-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
