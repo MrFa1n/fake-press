@@ -1,0 +1,18 @@
+.switcher {
+  font-size: 32px;
+  line-height: 1;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+
+  color: inherit;
+
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.switcher:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
