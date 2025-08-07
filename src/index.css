@@ -9,6 +9,7 @@ body,
 body[data-theme="light"] {
   --bg-color: #f9fafb;
   --text-color: #1f2937d6;
+  --overlay-border: rgba(0, 0, 0, 0.1);
 
   --card-bg: #fff;
   --card-border: rgba(0, 0, 0, 0.1);
@@ -32,6 +33,7 @@ body[data-theme="light"] {
 body[data-theme="dark"] {
   --bg-color: #1f2937d6;
   --text-color: #f9fafb;
+  --overlay-border: rgba(255, 255, 255, 0.1);
 
   --card-bg: #2c3e50;
   --card-border: rgba(255, 255, 255, 0.1);
