@@ -8,17 +8,21 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
-      <h1 className={styles.logo}>FakePress</h1>
-      <div className={styles.navigation}>
-        <Button
-          onClick={() => {
-            setIsOpen(true);
-          }}
-        >
-          О проекте
-        </Button>
-        <ThemeSwitcher />
+    <div className={styles.header}>
+      <div className={styles.content}>
+        <div className={styles.logo}>FakePress</div>
+        <div className={styles.navigation}>
+          <Button
+            onClick={() => {
+              setIsOpen(true);
+            }}
+            variant="glassBlue"
+            shape="pill"
+          >
+            О проекте
+          </Button>
+          <ThemeSwitcher />
+        </div>
       </div>
       <Modal
         isOpen={isOpen}
@@ -26,8 +30,8 @@ export const Header = () => {
           setIsOpen(false);
         }}
       >
-        <h2>О проекте</h2>
-        <p>
+        <h2 className={styles.title}>О проекте</h2>
+        <p className={styles.body}>
           Voluptatem ipsum praesentium repellendus sed quia. Beatae nulla modi
           ex reiciendis illo at. Commodi consequuntur dignissimos. In
           exercitationem tempore modi consequuntur reiciendis. Iste occaecati
@@ -35,6 +39,6 @@ export const Header = () => {
           dolorum.
         </p>
       </Modal>
-    </header>
+    </div>
   );
 };
