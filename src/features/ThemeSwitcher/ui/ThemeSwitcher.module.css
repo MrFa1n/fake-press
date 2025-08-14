@@ -1,0 +1,12 @@
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
