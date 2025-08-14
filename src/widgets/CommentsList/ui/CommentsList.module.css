@@ -1,0 +1,37 @@
+.commentsList {
+  border-top: 1px solid #ccc;
+}
+
+.container {
+  margin-left: 12px;
+}
+.comments {
+  margin-bottom: 8px;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  gap: 4px;
+}
+
+.commentIcon {
+  display: flex;
+}
+
+.commentText {
+  display: flex;
+  flex-direction: column;
+}
+.commentText p {
+  margin: 0;
+}
+
+.commentName {
+  font-weight: bold;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}

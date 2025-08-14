@@ -5,7 +5,6 @@
   background-color: var(--card-bg, #ffffff);
   box-shadow: 0 4px 10px var(--card-shadow, rgba(0, 0, 0, 0.05));
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -21,8 +20,8 @@
 }
 
 .body {
+  margin: 0 0 8px 0;
   font-size: 16px;
   color: var(--body-color, #3c3c4399);
   line-height: 1.5;
-  margin: 0;
 }

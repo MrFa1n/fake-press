@@ -32,6 +32,7 @@ body[data-theme="light"] {
   --card-shadow: rgba(0, 0, 0, 0.08);
   --card-shadow-hover: rgba(0, 0, 0, 0.12);
 
+  --label-filter-color: rgba(60, 60, 67, 0.6);
   --title-color: #333;
   --body-color: #666;
 
@@ -63,6 +64,7 @@ body[data-theme="dark"] {
   --card-shadow: rgba(0, 0, 0, 0.8);
   --card-shadow-hover: rgba(0, 0, 0, 0.12);
 
+  --label-filter-color: rgba(209, 213, 219, 0.6);
   --title-color: #f9fafb;
   --body-color: #d1d5db;
 

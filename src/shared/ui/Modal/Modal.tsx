@@ -68,3 +68,15 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     document.body
   );
 };
+
+Modal.Header = ({ children }: { children: ReactNode }) => (
+  <div className={styles.header}>{children}</div>
+);
+
+Modal.Body = ({ children }: { children: ReactNode }) => (
+  <div className={styles.body}>{children}</div>
+);
+
+Modal.Footer = ({ children }: { children: ReactNode }) => (
+  <div className={styles.footer}>{children}</div>
+);

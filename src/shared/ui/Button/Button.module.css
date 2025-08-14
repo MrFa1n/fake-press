@@ -12,14 +12,8 @@
   gap: 6px;
 }
 
-.iconOnly.sm {
-  padding: 4px;
-}
-.iconOnly.md {
+.iconOnly {
   padding: 6px;
-}
-.iconOnly.lg {
-  padding: 10px;
 }
 
 .pill {

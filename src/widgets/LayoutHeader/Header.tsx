@@ -30,14 +30,14 @@ export const Header = () => {
           setIsOpen(false);
         }}
       >
-        <h2 className={styles.title}>О проекте</h2>
-        <p className={styles.body}>
+        <Modal.Header>О проекте</Modal.Header>
+        <Modal.Body>
           Voluptatem ipsum praesentium repellendus sed quia. Beatae nulla modi
           ex reiciendis illo at. Commodi consequuntur dignissimos. In
           exercitationem tempore modi consequuntur reiciendis. Iste occaecati
           omnis temporibus cum dolorem nihil. Qui neque iure rem aut soluta
           dolorum.
-        </p>
+        </Modal.Body>
       </Modal>
     </div>
   );
