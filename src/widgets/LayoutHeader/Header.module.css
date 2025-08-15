@@ -1,11 +1,11 @@
 .header {
-  background-color: #1f2937;
-  color: #ffffff;
+  background-color: var(--header-bg, #1f2937);
+  color: var(--header-text, #ffffff);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--header-shadow, rgba(0, 0, 0, 0.1));
   border-radius: 0 0 20px 20px;
   background-clip: padding-box;
 }
@@ -14,4 +14,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+  color: var(--logo-color, inherit);
+}
+
+.navigation {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
 }
