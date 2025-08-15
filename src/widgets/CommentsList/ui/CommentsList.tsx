@@ -123,7 +123,9 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
           ))}
         </div>
         {comments.length > 3 && (
-          <Button onClick={toggle}>{collapsed ? "Подробнее" : "Скрыть"}</Button>
+          <Button variant="glassBlue" onClick={toggle}>
+            {collapsed ? "Подробнее" : "Скрыть"}
+          </Button>
         )}
       </div>
     </div>

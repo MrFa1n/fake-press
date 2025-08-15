@@ -3,7 +3,8 @@ import styles from "./Button.module.css";
 
 type ButtonProps = {
   variant?: "blue" | "gray" | "black" | "link" | "glassLight" | "glassBlue";
-  shape?: "pill" | "circle";
+  shape?: "pill" | "circle" | "softRounded";
+  size?: "extraSmall" | "small" | "medium" | "large";
   iconOnly?: boolean;
   disabled?: boolean;
   onClick?: () => void;
@@ -16,6 +17,7 @@ type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   variant = "blue",
   shape = "pill",
+  size = "medium",
   iconOnly = false,
   disabled = false,
   onClick,
@@ -28,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
     styles.btn,
     styles[variant],
     styles[shape],
+    styles[size],
     iconOnly ? styles.iconOnly : "",
     className,
   ]

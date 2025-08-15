@@ -3,6 +3,8 @@ import styles from "./Header.module.css";
 import { useState } from "react";
 import { Modal } from "@/shared/ui/Modal/Modal";
 import { Button } from "@/shared/ui/Button/Button";
+import { NavLink } from "react-router-dom";
+import { UserTabs } from "../UserTabs/UserTabs";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,17 +12,23 @@ export const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <div className={styles.logo}>FakePress</div>
-        <div className={styles.navigation}>
-          <Button
-            onClick={() => {
-              setIsOpen(true);
-            }}
-            variant="glassBlue"
-            shape="pill"
-          >
-            О проекте
-          </Button>
+        <NavLink to={"/"} className={styles.link}>
+          <div className={styles.logo}>FakePress</div>
+        </NavLink>
+        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <div className={styles.navigation}>
+            <UserTabs />
+            <Button
+              onClick={() => {
+                setIsOpen(true);
+              }}
+              variant="glassBlue"
+              shape="pill"
+              size="small"
+            >
+              О проекте
+            </Button>
+          </div>
           <ThemeSwitcher />
         </div>
       </div>
