@@ -7,6 +7,9 @@ body,
 }
 
 body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  background-attachment: fixed;
   padding-top: 112px;
   font-family: var(
     --typography-html-font,
@@ -83,9 +86,4 @@ body[data-theme="dark"] {
   --glass-foreground: rgba(255, 255, 255, 0.95);
   --glass-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
   --glass-blur: 12px;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
 }
