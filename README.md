@@ -133,12 +133,15 @@ src/
 
 1. Redux Toolkit Store → src/app/providers/store/
 
+   - [x] Реализован общий Store
+
 2. RTK Query API:
 
-   - postsApi, commentsApi, albumsApi, todosApi → src/entities/[entity]/api/
+   - [x] postsApi, commentsApi, albumsApi, todosApi → src/entities/[entity]/api/
 
 3. createEntityAdapter:
 
-   - postSlice, userSlice → src/entities/[entity]/model/slice/
+   - [x] postSlice, userSlice → src/entities/[entity]/model/slice/
 
 4. Инвалидация, кэширование, загрузка по userId и postId
+   - [x] Реализовано за счёт providesTags и invalidatesTags

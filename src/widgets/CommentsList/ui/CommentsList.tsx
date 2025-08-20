@@ -2,12 +2,7 @@ import { Button } from "@/shared/ui/Button/Button";
 import { useCallback, useState } from "react";
 import styles from "./CommentsList.module.css";
 import { useTheme } from "@/shared/lib/theme/useTheme";
-
-interface Comment {
-  id: number;
-  name: string;
-  text: string;
-}
+import type { Comment } from "@/entities/comment/types";
 
 interface CommentsListProps {
   comments: Comment[];
@@ -31,11 +26,7 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="-3.17 -3.17 37.99 37.99"
       >
-        <g
-          id="SVGRepo_bgCarrier"
-          stroke-width="0"
-          transform="translate(0,0), scale(1)"
-        >
+        <g id="SVGRepo_bgCarrier" transform="translate(0,0), scale(1)">
           <rect
             x="-3.17"
             y="-3.17"
@@ -43,16 +34,9 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
             height="37.99"
             rx="18.995"
             fill="#000000"
-            // strokewidth="0"
           ></rect>
         </g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="#CCCCCC"
-          stroke-width="0.1266"
-        ></g>
+        <g id="SVGRepo_tracerCarrier" stroke="#CCCCCC"></g>
         <g id="SVGRepo_iconCarrier">
           {" "}
           <g>
@@ -74,11 +58,7 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
         viewBox="-3.17 -3.17 37.99 37.99"
         stroke="#0000000"
       >
-        <g
-          id="SVGRepo_bgCarrier"
-          stroke-width="0"
-          transform="translate(0,0), scale(1)"
-        >
+        <g id="SVGRepo_bgCarrier" transform="translate(0,0), scale(1)">
           <rect
             x="-3.17"
             y="-3.17"
@@ -88,13 +68,7 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
             fill="#ffffff"
           ></rect>
         </g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="#CCCCCC"
-          stroke-width="0.1266"
-        ></g>
+        <g id="SVGRepo_tracerCarrier" stroke="#CCCCCC"></g>
         <g id="SVGRepo_iconCarrier">
           {" "}
           <g>
@@ -113,13 +87,13 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
       <div className={styles.container}>
         <div className={styles.comments}>
           {displayed.map((c) => (
-            <p className={styles.comment} key={c.id}>
+            <div className={styles.comment} key={c.id}>
               <div className={styles.commentIcon}>{icon}</div>
               <div className={styles.commentText}>
                 <p className={styles.commentName}>{c.name}</p>
-                <p className={styles.commentBody}>{c.text}</p>
+                <p className={styles.commentBody}>{c.body}</p>
               </div>
-            </p>
+            </div>
           ))}
         </div>
         {comments.length > 3 && (

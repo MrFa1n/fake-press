@@ -30,7 +30,6 @@ export const PostList = ({ posts }: PostListProps) => {
           id={post.id}
           title={post.title}
           body={post.body}
-          comments={post.comments}
         />
       ))}
     </section>

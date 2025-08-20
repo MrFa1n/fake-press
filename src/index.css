@@ -6,6 +6,11 @@ body,
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
