@@ -6,16 +6,41 @@ body,
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  background-attachment: fixed;
+  padding-top: 112px;
+  font-family: var(
+    --typography-html-font,
+    "SF Pro Display",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    sans-serif
+  );
+}
+
 body[data-theme="light"] {
-  --bg-color: #f9fafb;
-  --text-color: #1f2937d6;
+  --bg-color: linear-gradient(135deg, #ffd3e0, #b0e0ff, #d7b0ff);
+  --text-color: #1d1d1f;
   --overlay-border: rgba(0, 0, 0, 0.1);
+  --modal-bg: #fff;
 
   --card-bg: #fff;
   --card-border: rgba(0, 0, 0, 0.1);
   --card-shadow: rgba(0, 0, 0, 0.08);
   --card-shadow-hover: rgba(0, 0, 0, 0.12);
 
+  --label-filter-color: rgba(60, 60, 67, 0.6);
   --title-color: #333;
   --body-color: #666;
 
@@ -23,23 +48,31 @@ body[data-theme="light"] {
   --header-text: #ffffff;
   --header-shadow: rgba(0, 0, 0, 0.4);
 
-  --logo-color: inherit;
+  --logo-color: #1d1d1f;
 
-  --footer-bg: #f9fafb;
-  --footer-text: #4b5563;
+  --footer-bg: #f5f5f7;
+  --footer-text: #515154;
   --footer-border: rgba(229, 231, 235, 0.1);
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-foreground: rgba(0, 0, 0, 0.85);
+  --glass-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  --glass-blur: 10px;
 }
 
 body[data-theme="dark"] {
-  --bg-color: #1f2937d6;
-  --text-color: #f9fafb;
+  --bg-color: linear-gradient(135deg, #1e1f29, #2c3e50, #4a148c);
+  --text-color: #f5f5f7;
   --overlay-border: rgba(255, 255, 255, 0.1);
+  --modal-bg: #323232;
 
-  --card-bg: #2c3e50;
+  --card-bg: #323232;
   --card-border: rgba(255, 255, 255, 0.1);
   --card-shadow: rgba(0, 0, 0, 0.8);
   --card-shadow-hover: rgba(0, 0, 0, 0.12);
 
+  --label-filter-color: rgba(209, 213, 219, 0.6);
   --title-color: #f9fafb;
   --body-color: #d1d5db;
 
@@ -47,14 +80,15 @@ body[data-theme="dark"] {
   --header-text: #1f2937;
   --header-shadow: rgba(0, 0, 0, 0.4);
 
-  --logo-color: inherit;
+  --logo-color: #f5f5f7;
 
-  --footer-bg: #2c3e50;
-  --footer-text: #f9fafb;
+  --footer-bg: #1d1d1f;
+  --footer-text: #a1a1a6;
   --footer-border: rgba(255, 255, 255, 0.1);
-}
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  --glass-bg: rgba(15, 15, 20, 0.44);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-foreground: rgba(255, 255, 255, 0.95);
+  --glass-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
+  --glass-blur: 12px;
 }
