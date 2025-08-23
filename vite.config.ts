@@ -8,9 +8,11 @@ export default defineConfig({
     alias: {
       "@": "/src",
       "@app": "/src/app",
+      "@entities": "/src/entities",
+      "@features": "/src/features",
+      "@pages": "/src/pages",
       "@shared": "/src/shared",
       "@widgets": "/src/widgets",
-      "@entities": "/src/entities",
     },
   },
 });
