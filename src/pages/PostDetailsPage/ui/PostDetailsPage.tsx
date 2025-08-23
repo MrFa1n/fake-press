@@ -26,5 +26,13 @@ export const PostDetailsPage = () => {
     return <div>Post not found.</div>;
   }
 
-  return <PostCard id={post.id} title={post.title} body={post.body} />;
+  return (
+    <PostCard
+      userId={post.userId}
+      id={post.id}
+      title={post.title}
+      body={post.body}
+      comments={post.comments}
+    />
+  );
 };

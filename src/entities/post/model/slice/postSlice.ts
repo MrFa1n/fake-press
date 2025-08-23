@@ -1,5 +1,5 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
-import type { Post } from "../../types";
+import type { Post } from "../types";
 import type { RootState } from "@/app/providers/store";
 
 const postsAdapter = createEntityAdapter<Post>();

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Photo } from "../../types";
+import type { Photo } from "../../model/types";
 import styles from "./PhotoCard.module.css";
 import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
 

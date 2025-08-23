@@ -1,28 +1,47 @@
-import React from "react";
+import React, {
+  type ButtonHTMLAttributes,
+  type DetailedHTMLProps,
+  type MouseEventHandler,
+} from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = {
-  variant?: "blue" | "gray" | "black" | "link" | "glassLight" | "glassBlue";
-  shape?: "pill" | "circle" | "softRounded";
-  size?: "extraSmall" | "small" | "medium" | "large";
+type ButtonVariant =
+  | "blue"
+  | "gray"
+  | "black"
+  | "link"
+  | "glassLight"
+  | "glassBlue";
+type ButtonShape = "pill" | "circle" | "softRounded";
+type ButtonSize = "extraSmall" | "small" | "medium" | "large";
+type ButtonType = "button" | "submit" | "reset";
+
+interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  shape?: ButtonShape;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
   iconOnly?: boolean;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  type?: "button" | "submit" | "reset";
-};
+  type?: ButtonType;
+}
 
 export const Button: React.FC<ButtonProps> = ({
-  variant = "blue",
+  children,
   shape = "pill",
-  size = "medium",
+  variant = "blue",
   iconOnly = false,
+  size = "medium",
+  className,
   disabled = false,
   onClick,
-  children,
-  className,
   style,
   type = "button",
 }) => {

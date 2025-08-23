@@ -1,10 +1,11 @@
 import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
 import styles from "./IndexPage.module.css";
 import { useMemo } from "react";
-import type { Post } from "@/entities/post/types";
+import type { Post } from "@/entities/post/model/types";
 import { Button } from "@/shared/ui/Button/Button";
 import { NavLink } from "react-router-dom";
 import { PostCard } from "@/entities/post/ui/PostCard";
+import { ItemList } from "@/shared/ui/ItemList/ItemList";
 
 interface IndexPageProps {
   posts: Post[];
@@ -29,16 +30,22 @@ export const IndexPage = ({ posts }: IndexPageProps) => {
             </Button>
           </NavLink>
         </GlassBlock>
+
         <h1>Последние посты</h1>
-        {recentPosts.map((post) => (
-          <PostCard
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            body={post.body}
-            comments={post.comments}
-          />
-        ))}
+        <ItemList<Post>
+          items={recentPosts}
+          keyExtractor={(post) => post.id}
+          renderItem={(post) => (
+            <PostCard
+              key={post.id}
+              id={post.id}
+              userId={post.userId}
+              title={post.title}
+              body={post.body}
+              comments={post.comments}
+            />
+          )}
+        />
       </div>
     </div>
   );

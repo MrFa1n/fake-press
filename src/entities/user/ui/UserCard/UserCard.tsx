@@ -1,5 +1,5 @@
 import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
-import type { User } from "../../types";
+import type { User } from "../../model/types";
 import styles from "./UserCard.module.css";
 import { NavLink } from "react-router-dom";
 import { Button } from "@/shared/ui/Button/Button";

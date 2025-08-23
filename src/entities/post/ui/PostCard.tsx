@@ -1,5 +1,5 @@
 import { CommentsList } from "@/widgets/CommentsList/ui/CommentsList";
-import type { Post } from "../types";
+import type { Post } from "../model/types";
 import styles from "./PostCard.module.css";
 import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
 import { NavLink } from "react-router-dom";

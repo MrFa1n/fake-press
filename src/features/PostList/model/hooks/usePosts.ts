@@ -1,4 +1,4 @@
-import type { Post } from "@/entities/post/types";
+import type { Post } from "@/entities/post/model/types";
 import { useEffect, useState } from "react";
 
 export const usePosts = () => {

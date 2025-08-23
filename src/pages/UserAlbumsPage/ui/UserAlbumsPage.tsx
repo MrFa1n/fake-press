@@ -1,6 +1,8 @@
 import { useGetAlbumsByUserQuery } from "@/entities/album/api/albumsApi";
+import type { Album } from "@/entities/album/model/types";
 import { useGetUsersByIdQuery } from "@/entities/user/api/userApi";
 import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
+import { ItemList } from "@/shared/ui/ItemList/ItemList";
 import { NavLink, useParams } from "react-router-dom";
 
 export const UserAlbumsPage = () => {
@@ -21,13 +23,17 @@ export const UserAlbumsPage = () => {
   return (
     <div>
       <h1>Альбомы пользователя {user?.name}</h1>
-      {albums.map((album) => (
-        <GlassBlock key={album.id}>
-          <NavLink to={`/albums/${album.id}/photos`}>
-            📷 [{album.title}]
-          </NavLink>
-        </GlassBlock>
-      ))}
+      <ItemList<Album>
+        items={albums}
+        keyExtractor={(album) => album.id}
+        renderItem={(album) => (
+          <GlassBlock key={album.id}>
+            <NavLink to={`/albums/${album.id}/photos`}>
+              📷 [{album.title}]
+            </NavLink>
+          </GlassBlock>
+        )}
+      />
     </div>
   );
 };

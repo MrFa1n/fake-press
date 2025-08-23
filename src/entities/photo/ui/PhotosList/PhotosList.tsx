@@ -1,6 +1,6 @@
 import { PhotoCard } from "../PhotoCard/PhotoCard";
 import styles from "./PhotosList.module.css";
-import type { Photo } from "../../types";
+import type { Photo } from "../../model/types";
 
 interface PhotosListProps {
   photos: Photo[];

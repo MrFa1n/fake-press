@@ -145,3 +145,25 @@ src/
 
 4. Инвалидация, кэширование, загрузка по userId и postId
    - [x] Реализовано за счёт providesTags и invalidatesTags
+
+### TO-DO HW-6
+
+Необходимо типизировать все сущности и компоненты, внедрить дженерики и правильно указать типы обработчиков событий. Настроить строгий режим TypeScript.
+
+Задание:
+
+1. Типы: Post, User, Comment, Album, Photo, Todo → src/entities/[entity]/model/types.ts
+
+   - [x] Созданы описания всех типов сущностей
+
+2. Дженерик ItemList<T> → src/shared/ui/ItemList/
+
+   - [x] Реализован дженерик ItemList
+
+3. Типизация props, обработчиков, PropsWithChildren, MouseEventHandler
+
+   - [x] Реализована типизация в button
+
+4. tsconfig.base.json, tsconfig.app.json
+
+   - [x] Создан base configuration

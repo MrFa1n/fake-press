@@ -2,7 +2,8 @@ import { Button } from "@/shared/ui/Button/Button";
 import { useCallback, useState } from "react";
 import styles from "./CommentsList.module.css";
 import { useTheme } from "@/shared/lib/theme/useTheme";
-import type { Comment } from "@/entities/comment/types";
+import type { Comment } from "@/entities/comment/model/types";
+import { ItemList } from "@/shared/ui/ItemList/ItemList";
 
 interface CommentsListProps {
   comments: Comment[];
@@ -86,15 +87,19 @@ export const CommentsList = ({ comments }: CommentsListProps) => {
     <div className={styles.commentsList}>
       <div className={styles.container}>
         <div className={styles.comments}>
-          {displayed.map((c) => (
-            <div className={styles.comment} key={c.id}>
-              <div className={styles.commentIcon}>{icon}</div>
-              <div className={styles.commentText}>
-                <p className={styles.commentName}>{c.name}</p>
-                <p className={styles.commentBody}>{c.body}</p>
+          <ItemList<Comment>
+            items={displayed}
+            keyExtractor={(comment) => comment.id}
+            renderItem={(comment) => (
+              <div className={styles.comment} key={comment.id}>
+                <div className={styles.commentIcon}>{icon}</div>
+                <div className={styles.commentText}>
+                  <p className={styles.commentName}>{comment.name}</p>
+                  <p className={styles.commentBody}>{comment.body}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )}
+          />
         </div>
         {comments.length > 3 && (
           <Button variant="glassBlue" onClick={toggle}>

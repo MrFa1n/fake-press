@@ -7,10 +7,13 @@ interface GlassBlockProps {
   style?: React.CSSProperties;
 }
 
+const defaultClassName = "";
+const defaultStyle: React.CSSProperties = {};
+
 export const GlassBlock: React.FC<GlassBlockProps> = ({
   children,
-  className = "",
-  style = {},
+  className = defaultClassName,
+  style = defaultStyle,
 }) => {
   return (
     <div className={`${styles.glassBlock} ${className}`} style={style}>
