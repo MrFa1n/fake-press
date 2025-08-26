@@ -1,9 +1,9 @@
-import { Button } from "@/shared/ui/Button/Button";
+import { Button } from "@/shared/ui/Button";
 import { useCallback, useState } from "react";
 import styles from "./CommentsList.module.css";
-import { useTheme } from "@/shared/lib/theme/useTheme";
-import type { Comment } from "@/entities/comment/model/types";
-import { ItemList } from "@/shared/ui/ItemList/ItemList";
+import { useTheme } from "@/shared/lib/theme";
+import type { Comment } from "@/entities/comment";
+import { ItemList } from "@/shared/ui/ItemList";
 
 interface CommentsListProps {
   comments: Comment[];

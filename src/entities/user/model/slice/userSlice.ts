@@ -1,6 +1,5 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 import type { User } from "../types";
-import type { RootState } from "@/app/providers/store";
 
 const usersAdapter = createEntityAdapter<User>();
 
@@ -18,8 +17,11 @@ const userSlice = createSlice({
 
 export const { addMany, addOne, setAll } = userSlice.actions;
 export const usersReducer = userSlice.reducer;
-export const userSelectors = usersAdapter.getSelectors<RootState>(
-  (state) => state.user
+
+export type UserState = ReturnType<typeof usersReducer>;
+
+export const userSelectors = usersAdapter.getSelectors<UserState>(
+  (state) => state
 );
 
-export default userSlice.reducer;
+export default usersReducer;

@@ -1,7 +1,7 @@
 import { useEffect, type ReactNode } from "react";
 import styles from "./Modal.module.css";
 import ReactDOM from "react-dom";
-import { Button } from "../Button/Button";
+import { Button } from "@shared/ui/Button";
 
 interface ModalProps {
   isOpen: boolean;

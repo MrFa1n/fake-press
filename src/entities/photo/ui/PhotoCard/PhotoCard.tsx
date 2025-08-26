@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Photo } from "../../model/types";
 import styles from "./PhotoCard.module.css";
-import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
+import { GlassBlock } from "@/shared/ui/GlassBlock";
 
 interface Props {
   photo: Photo;

@@ -1,6 +1,6 @@
-import { useTheme } from "@/shared/lib/theme/useTheme";
+import { useTheme } from "@/shared/lib/theme";
 import styles from "./ThemeSwitcher.module.css";
-import { Button } from "@/shared/ui/Button/Button";
+import { Button } from "@/shared/ui/Button";
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();

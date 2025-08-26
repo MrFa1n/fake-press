@@ -1,4 +1,4 @@
-import { ItemList } from "@/shared/ui/ItemList/ItemList";
+import { ItemList } from "@/shared/ui/ItemList";
 import type { User } from "../../model/types";
 import { UserCard } from "../UserCard/UserCard";
 import styles from "./UsersList.module.css";

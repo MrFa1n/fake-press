@@ -1,9 +1,9 @@
-import { CommentsList } from "@/widgets/CommentsList/ui/CommentsList";
+import { CommentsList } from "@/widgets/CommentsList";
 import type { Post } from "../model/types";
 import styles from "./PostCard.module.css";
-import { GlassBlock } from "@/shared/ui/GlassBlock/GlassBlock";
+import { GlassBlock } from "@/shared/ui/GlassBlock";
 import { NavLink } from "react-router-dom";
-import { useGetCommentsByPostQuery } from "@/entities/comment/api/commentsApi";
+import { useGetCommentsByPostQuery } from "@/entities/comment";
 
 export const PostCard = ({ id, title, body }: Post) => {
   const { data: comments = [], isLoading } = useGetCommentsByPostQuery(id);

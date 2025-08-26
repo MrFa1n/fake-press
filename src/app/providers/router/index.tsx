@@ -1,16 +1,16 @@
-import { useGetPostsQuery } from "@/entities/post/api/postsApi";
-import { AlbumPhotosPage } from "@/pages/AlbumPhotosPage";
-import { IndexPage } from "@/pages/IndexPage";
-import { PostDetailsPage } from "@/pages/PostDetailsPage";
-import { UserAlbumsPage } from "@/pages/UserAlbumsPage";
-import { UsersPage } from "@/pages/UsersPage";
-import { UserPostsPage } from "@/pages/UserPostsPage";
-import { UserTodosPage } from "@/pages/UserTodosPage";
-import { MainLayout } from "@/shared/layouts/MainLayout";
-import { withLoading } from "@/shared/lib/hoc/withLoading";
-import { Footer } from "@/widgets/LayoutFooter/Footer";
-import { Header } from "@/widgets/LayoutHeader/Header";
-import { PostList } from "@/widgets/PostList/PostList";
+import { useGetPostsQuery } from "@/entities/post";
+import { AlbumPhotosPage } from "@/pages/AlbumPhotos";
+import { IndexPage } from "@/pages/Index";
+import { PostDetailsPage } from "@/pages/PostDetails";
+import { UserAlbumsPage } from "@/pages/UserAlbums";
+import { UsersPage } from "@/pages/Users";
+import { UserPostsPage } from "@/pages/UserPosts";
+import { UserTodosPage } from "@/pages/UserTodos";
+import { MainLayout } from "@/shared/layouts";
+import { withLoading } from "@/shared/lib/hoc";
+import { Footer } from "@/widgets/LayoutFooter";
+import { Header } from "@/widgets/LayoutHeader";
+import { PostList } from "@/widgets/PostList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export const AppRouter = () => {
