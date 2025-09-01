@@ -1,5 +1,6 @@
 import { Button } from "@/shared/ui/Button/Button";
 import { NavLink } from "react-router-dom";
+import styles from "./UserTabs.module.css";
 
 export const UserTabs = () => {
   const min = 1;
@@ -14,7 +15,13 @@ export const UserTabs = () => {
   return (
     <div>
       {tabs.map((tab) => (
-        <NavLink key={tab.path} to={tab.path}>
+        <NavLink
+          key={tab.path}
+          to={tab.path}
+          className={({ isActive }) =>
+            isActive ? styles.activeTab : styles.inactiveTab
+          }
+        >
           <Button variant="link">{tab.label}</Button>
         </NavLink>
       ))}
