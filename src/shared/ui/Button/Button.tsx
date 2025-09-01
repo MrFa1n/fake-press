@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./Button.module.css";
 
 type ButtonProps = {
@@ -13,7 +13,7 @@ type ButtonProps = {
   type?: "button" | "submit" | "reset";
 };
 
-export const Button: React.FC<ButtonProps> = ({
+const ButtonComponent: React.FC<ButtonProps> = ({
   variant = "blue",
   shape = "pill",
   iconOnly = false,
@@ -46,3 +46,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export const Button = memo(ButtonComponent);

@@ -6,11 +6,11 @@ import { Header } from "@/widgets/LayoutHeader/Header";
 import { PostList } from "@/widgets/PostList/PostList";
 import { useState } from "react";
 
+const PostListWithLoading = withLoading(PostList);
+
 export function App() {
   const [posts] = useState(mockPosts);
   const [loading] = useState(false);
-
-  const PostListWithLoading = withLoading(PostList);
 
   return (
     <MainLayout header={<Header />} footer={<Footer />}>
