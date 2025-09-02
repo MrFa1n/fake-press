@@ -11,7 +11,9 @@ export const MainLayout = ({ children, header, footer }: MainLayoutProps) => {
   return (
     <div className={styles.layout}>
       {header}
-      <main className={styles.main}>{children}</main>
+      <div className={styles.container}>
+        <main className={styles.main}>{children}</main>
+      </div>
       {footer}
     </div>
   );

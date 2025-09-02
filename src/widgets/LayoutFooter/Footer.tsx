@@ -5,7 +5,9 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <p>© {currentYear} FakePress</p>
+      <div className={styles.content}>
+        <p>© {currentYear} FakePress</p>
+      </div>
     </footer>
   );
 };

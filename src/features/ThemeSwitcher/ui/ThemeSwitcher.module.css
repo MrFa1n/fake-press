@@ -1,18 +1,12 @@
-.switcher {
-  font-size: 32px;
-  line-height: 1;
-
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-
-  color: inherit;
-
-  transition: transform 0.2s ease, filter 0.2s ease;
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
 }
 
-.switcher:hover {
-  transform: scale(1.05);
-  filter: brightness(1.15);
+.icon {
+  width: 20px;
+  height: 20px;
 }
