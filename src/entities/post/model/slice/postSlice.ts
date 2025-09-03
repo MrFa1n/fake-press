@@ -1,5 +1,6 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 import type { Post } from "../types";
+import { postsApi } from "../../api/postsApi";
 
 const postsAdapter = createEntityAdapter<Post>();
 
@@ -12,6 +13,26 @@ const postSlice = createSlice({
     addMany: postsAdapter.addMany,
     addOne: postsAdapter.addOne,
     setAll: postsAdapter.setAll,
+  },
+  extraReducers: (builder) => {
+    builder.addMatcher(
+      postsApi.endpoints.getPosts.matchFulfilled,
+      (state, { payload }) => {
+        postsAdapter.setAll(state, payload);
+      }
+    );
+    builder.addMatcher(
+      postsApi.endpoints.getPostById.matchFulfilled,
+      (state, { payload }) => {
+        postsAdapter.upsertOne(state, payload);
+      }
+    );
+    builder.addMatcher(
+      postsApi.endpoints.getPostByUserId.matchFulfilled,
+      (state, { payload }) => {
+        postsAdapter.upsertMany(state, payload);
+      }
+    );
   },
 });
 
