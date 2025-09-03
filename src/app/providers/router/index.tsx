@@ -5,7 +5,6 @@ import { UserAlbumsPage } from "@/pages/UserAlbumsPage";
 import { UsersPage } from "@/pages/UsersPage";
 import { UserPostsPage } from "@/pages/UserPostsPage";
 import { UserTodosPage } from "@/pages/UserTodosPage";
-import { PostPage } from "@/pages/PostPage";
 import { MainLayout } from "@/shared/layouts/MainLayout";
 import { withLoading } from "@/shared/lib/hoc/withLoading";
 import { Footer } from "@/widgets/LayoutFooter/Footer";
