@@ -40,5 +40,9 @@
 
 .navigation {
   display: flex;
-  gap: 24px;
+  gap: 14px;
+}
+
+.link {
+  text-decoration: none;
 }

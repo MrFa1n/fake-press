@@ -102,3 +102,25 @@ src/
 
 5. Оптимизации:
    - [x] useMemo, useCallback в PostList
+
+### TO-DO HW-4
+
+Необходимо добавить маршруты для страниц с постами, комментариями, альбомами, фото и задачами пользователей. Реализовать навигацию и кастомный хук для получения постов.
+
+Задание:
+
+1. Настроить маршруты:
+
+   - [x] /posts, /posts/:id, /users/:id/albums, /albums/:id/photos, /users/:id/todos, /users/:id/posts
+
+   - [x] Роуты → src/pages/
+
+   - [x] Роутинг → src/app/providers/router/
+
+2. Навигация через NavLink → UserTabs → src/widgets/UserTabs/
+
+   - [x] Реализовать навигацию
+
+3. Хук usePosts → src/features/PostList/model/hooks/
+
+   - [x] Реализовать хук

@@ -22,7 +22,7 @@ body {
 }
 
 body[data-theme="light"] {
-  --bg-color: #fff;
+  --bg-color: linear-gradient(135deg, #ffd3e0, #b0e0ff, #d7b0ff);
   --text-color: #1d1d1f;
   --overlay-border: rgba(0, 0, 0, 0.1);
   --modal-bg: #fff;
@@ -54,7 +54,7 @@ body[data-theme="light"] {
 }
 
 body[data-theme="dark"] {
-  --bg-color: #000;
+  --bg-color: linear-gradient(135deg, #1e1f29, #2c3e50, #4a148c);
   --text-color: #f5f5f7;
   --overlay-border: rgba(255, 255, 255, 0.1);
   --modal-bg: #323232;
@@ -86,6 +86,6 @@ body[data-theme="dark"] {
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-color);
 }
