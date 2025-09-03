@@ -2,12 +2,7 @@ import { Button } from "@/shared/ui/Button/Button";
 import { useCallback, useState } from "react";
 import styles from "./CommentsList.module.css";
 import { CommentCard } from "@/entities/comment/ui/CommentCard";
-
-interface Comment {
-  id: number;
-  name: string;
-  text: string;
-}
+import type { Comment } from "@/entities/comment/types";
 
 interface CommentsListProps {
   comments: Comment[];

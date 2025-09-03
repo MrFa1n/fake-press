@@ -11,6 +11,7 @@ export const UserTabs = () => {
     { label: "Посты", path: "/posts" },
     { label: "Альбомы", path: `/albums/${userId}/photos` },
     { label: "Задачи", path: `/users/${userId}/todos` },
+    { label: "Пользователи", path: `/users` },
   ];
   return (
     <div>

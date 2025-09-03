@@ -124,3 +124,24 @@ src/
 3. Хук usePosts → src/features/PostList/model/hooks/
 
    - [x] Реализовать хук
+
+### TO-DO HW-5
+
+Необходимо настроить глобальное состояние приложения с использованием Redux Toolkit и подключить работу с API через RTK Query. Реализовать получение данных и кэширование.
+
+Задание:
+
+1. Redux Toolkit Store → src/app/providers/store/
+
+   - [x] Реализован общий Store
+
+2. RTK Query API:
+
+   - [x] postsApi, commentsApi, albumsApi, todosApi → src/entities/[entity]/api/
+
+3. createEntityAdapter:
+
+   - [x] postSlice, userSlice → src/entities/[entity]/model/slice/
+
+4. Инвалидация, кэширование, загрузка по userId и postId
+   - [x] Реализовано за счёт providesTags и invalidatesTags
