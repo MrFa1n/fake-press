@@ -3,7 +3,7 @@ import styles from "./IndexPage.module.css";
 import { useMemo } from "react";
 import type { Post } from "@/entities/post/types";
 import { Button } from "@/shared/ui/Button/Button";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { PostCard } from "@/entities/post/ui/PostCard";
 
 interface IndexPageProps {
@@ -23,11 +23,11 @@ export const IndexPage = ({ posts }: IndexPageProps) => {
             Пожалуйста, используйте навигацию вверху для доступа к другим
             разделам.
           </p>
-          <NavLink to={"/posts"}>
+          <Link to={"/posts"}>
             <Button variant="glassLight" shape="softRounded" size="large">
               Начать просмотр
             </Button>
-          </NavLink>
+          </Link>
         </GlassBlock>
         <h1>Последние посты</h1>
         {recentPosts.map((post) => (
